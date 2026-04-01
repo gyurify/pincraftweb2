@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PinCraft | Premium Visual Publishing</title>
+    <title>Pin Button Maker | Java Swing Desktop Prototype</title>
     <meta
       name="description"
-      content="PinCraft helps creators and modern teams design, organize, and launch premium visual campaigns from one elegant workspace."
+      content="Pin Button Maker is a Java Swing desktop prototype with Login, Home, Editor, and Print screens for layered button design, print composition, and PDF export."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -24,42 +24,41 @@
 
       <header class="site-header">
         <nav class="navbar" aria-label="Primary">
-          <a class="brand" href="#home" aria-label="PinCraft home">PinCraft</a>
+          <a class="brand" href="#home" aria-label="Pin Button Maker home">Pin Button Maker</a>
 
           <div class="nav-links">
             <a href="#home">Home</a>
             <a href="#features">Features</a>
             <a href="#preview">Preview</a>
-            <a href="#download">Download</a>
+            <a href="#download">Prototype</a>
             <a href="#about">About</a>
             <a href="#members">Members</a>
           </div>
 
-          <a class="btn btn-nav" href="#download">Download App</a>
+          <a class="btn btn-nav" href="#preview">Review Prototype</a>
         </nav>
       </header>
 
       <main>
         <section class="hero" id="home">
           <div class="hero-copy">
-            <p class="eyebrow">Premium visual publishing for modern teams</p>
+            <p class="eyebrow">Java Swing Desktop Prototype</p>
 
             <h1>
-              Design, organize, and launch
-              <span>beautiful pins</span>
-              with calm precision.
+              Prototype a complete
+              <span>pin button editor</span>
+              from login to PDF export.
             </h1>
 
             <p class="hero-text">
-              PinCraft brings your visual workflow into one polished space so
-              creators, marketers, and product teams can move from idea to
-              launch with sharper assets, clearer collaboration, and less
-              clutter.
+              Pin Button Maker is a modular Swing-only concept app built around
+              CardLayout navigation, shared project state, layer-based editing,
+              print composition, and PDF export through Apache PDFBox.
             </p>
 
             <div class="hero-actions">
-              <a class="btn btn-primary" href="#download">Download App</a>
-              <a class="btn btn-secondary" href="#preview">See Preview</a>
+              <a class="btn btn-primary" href="#preview">View Desktop Preview</a>
+              <a class="btn btn-secondary" href="#features">Read App Flow</a>
             </div>
 
             <div class="hero-proof">
@@ -68,11 +67,11 @@
                 <span></span>
                 <span></span>
               </div>
-              <p>Built for creative teams who want studio-grade polish without the noise.</p>
+              <p>Built to present the exact Login, Home, Editor, and Print workflow defined in the Java Swing specification.</p>
             </div>
           </div>
 
-          <div class="hero-visual" aria-label="PinCraft app preview">
+          <div class="hero-visual" aria-label="Pin Button Maker desktop prototype preview">
             <div class="preview-ambient ambient-one" aria-hidden="true"></div>
             <div class="preview-ambient ambient-two" aria-hidden="true"></div>
 
@@ -81,8 +80,10 @@
               <div class="toolbar-mini-grid" aria-hidden="true">
                 <span>Save</span>
                 <span>Load</span>
-                <span>Upload</span>
+                <span>Upload Image</span>
+                <span>Add Photo</span>
                 <span>Add Text</span>
+                <span>Home</span>
               </div>
               <figure class="preview-card-reveal">
                 <img
@@ -92,19 +93,90 @@
                 />
               </figure>
               <p class="card-note">
-                The real workspace uses a dark utility bar that keeps editing,
-                upload, and print actions visible at a glance.
+                The Swing editor keeps save, load, upload, real-size, print,
+                and log-out actions pinned to one dark command bar.
               </p>
             </article>
 
             <article class="preview-layer preview-main">
-              <figure class="desktop-preview-image-shell desktop-preview-image-shell-hero">
-                <img
-                  class="system-screenshot system-screenshot-editor"
-                  src="assets/pin-button-maker-editor-preview.png"
-                  alt="Pin Button Maker desktop editor preview showing the pin canvas, toolbar, layer tabs, and right-side transform controls"
-                />
-              </figure>
+              <div class="desktop-editor-frame desktop-editor-frame-hero" aria-label="Pin Button Maker editor mockup with toolbar, circular pin canvas, sidebar controls, and layer tabs">
+                <div class="editor-command-bar" aria-hidden="true">
+                  <span>Save</span>
+                  <span>Load</span>
+                  <span class="active-button">Upload Image</span>
+                  <span>Add Photo</span>
+                  <span>Add Text</span>
+                  <span>Home</span>
+                  <span>Print &rarr;</span>
+                </div>
+
+                <div class="editor-main-grid">
+                  <div class="editor-stage">
+                    <div class="pin-button-preview pin-button-preview-editor" aria-hidden="true">
+                      <span class="pin-button-guide"></span>
+                      <span class="pin-button-surface"></span>
+                      <span class="pin-button-ring"></span>
+                      <span class="pin-button-label pin-button-label-editor-top">Hello</span>
+                      <span class="pin-button-photo pin-button-photo-editor"></span>
+                      <span class="pin-button-label pin-button-label-editor-bottom">PinCraft</span>
+                    </div>
+                  </div>
+
+                  <aside class="editor-inspector">
+                    <div class="inspector-block">
+                      <h3>Text section</h3>
+                      <p>Active Layer: Text 1</p>
+                      <span class="inspector-label">Text</span>
+                      <span class="inspector-field">PinCraft</span>
+                      <span class="inspector-label">Font</span>
+                      <span class="inspector-select">Poppins</span>
+                      <span class="inspector-label">Color</span>
+                      <span class="inspector-field inspector-field-strong">Color #282E3A</span>
+                      <div class="inspector-slider-row inspector-slider-row-bend">
+                        <label>Bend</label>
+                        <span class="inspector-slider slider-bend"></span>
+                        <small>0 deg</small>
+                        <span class="inspector-inline-icon" aria-hidden="true">&#8635;</span>
+                      </div>
+                      <div class="inspector-inline-actions" aria-hidden="true">
+                        <span class="inspector-inline-button inspector-inline-button-wide">Reset Text Position</span>
+                        <span class="inspector-inline-button">&#8596;</span>
+                        <span class="inspector-inline-button">&#8597;</span>
+                      </div>
+                    </div>
+
+                    <div class="inspector-block">
+                      <h3>Transform section</h3>
+                      <div class="inspector-slider-row">
+                        <label>Size</label>
+                        <span class="inspector-slider slider-size-editor"></span>
+                        <small>100%</small>
+                      </div>
+                      <div class="inspector-slider-row">
+                        <label>Rotate</label>
+                        <span class="inspector-slider slider-rotate-editor"></span>
+                        <small>0 deg</small>
+                      </div>
+                      <div class="inspector-slider-row">
+                        <label>Stretch</label>
+                        <span class="inspector-slider slider-stretch-editor"></span>
+                        <small>100%</small>
+                      </div>
+                      <div class="inspector-slider-row">
+                        <label>Transparency</label>
+                        <span class="inspector-slider slider-transparency-editor"></span>
+                        <small>100%</small>
+                      </div>
+                    </div>
+                  </aside>
+                </div>
+
+                <div class="editor-tabbar editor-tabbar-editor" aria-hidden="true">
+                  <span class="editor-tab"><strong>Photo</strong><small>&times;</small></span>
+                  <span class="editor-tab active"><strong>Text 1</strong><small>&times;</small></span>
+                  <span class="editor-tab"><strong>Text 2</strong><small>&times;</small></span>
+                </div>
+              </div>
             </article>
 
             <article class="preview-layer preview-card preview-card-insights">
@@ -122,29 +194,27 @@
               <figure class="preview-card-reveal">
                 <img
                   class="preview-card-reveal-image"
-                  src="assets/pin-button-maker-editor-preview.png"
+                  src="assets/print.png"
                   alt="Full Pin Button Maker desktop editor layout"
                 />
               </figure>
               <p class="card-note">
-                The print screen arranges the layout based on the selected
-                button size, and users can choose either A4 or Letter paper
-                before export.
+                The print page recalculates placement from the selected button
+                size and lets users switch between A4 or Letter before export.
               </p>
             </article>
 
             <article class="preview-layer preview-card preview-card-library">
-              <p class="card-kicker">Layer Tabs</p>
+              <p class="card-kicker">Layer Rules</p>
               <div class="tab-mini-list" aria-hidden="true">
+                <span>Text</span>
                 <span class="active">Photo</span>
-                <span>Text 1</span>
-                <span>Text 2</span>
               </div>
               <div class="printable-item-mini">
                 <span class="printable-thumb" aria-hidden="true"></span>
                 <div>
-                  <strong>2.25" Pin</strong>
-                  <small>Printable item ready</small>
+                  <strong>Visible layers only</strong>
+                  <small>0% transparency stays out of print</small>
                 </div>
               </div>
               <figure class="preview-card-reveal">
@@ -154,122 +224,127 @@
                   alt="Full Pin Button Maker desktop editor layout"
                 />
               </figure>
+              <p class="card-note">
+                Layer tabs switch the active target, allow hide or unhide on
+                double-click, and decide what reaches the print gallery.
+              </p>
             </article>
           </div>
         </section>
 
-        <section class="features-section" id="features">
+<section class="features-section" id="features">
           <div class="features-intro">
             <div>
               <p class="section-kicker">Features</p>
               <h2>
-                Explore PinCraft through a polished feature set designed for
-                <span>clarity, preview, and download readiness</span>.
+                Explore the desktop flow through features that mirror the
+                <span>real Java Swing screens, layers, and print logic</span>.
               </h2>
             </div>
 
             <p class="features-lead">
-              The website combines structured product presentation with a
-              user-friendly layout, helping visitors understand the system,
-              preview its interface, and move naturally toward installation.
+              This page now presents the same behavior described in your
+              prototype brief, from CardLayout navigation and shared state to
+              layer editing, print composition, and PDF export.
             </p>
           </div>
 
           <div class="feature-showcase">
             <div class="feature-board">
               <div class="feature-board-head">
-                <p class="panel-kicker">Website Features</p>
-                <strong>Minimal, organized, and built for clear product discovery.</strong>
+                <p class="panel-kicker">Desktop App Features</p>
+                <strong>Each feature block maps directly to the requested Swing-only prototype.</strong>
               </div>
 
               <div class="feature-grid">
                 <article class="feature-card">
                   <span class="feature-index">01</span>
-                  <h3>Clean Responsive Layout</h3>
+                  <h3>CardLayout Navigation</h3>
                   <p>
-                    A spacious structure adapts smoothly across desktop and
-                    mobile while keeping the presentation elegant and readable.
+                    LoginPage, HomePage, EditorPage, and PrintPage are framed as
+                    one clear desktop flow driven by CardLayout page changes.
                   </p>
                 </article>
 
                 <article class="feature-card">
                   <span class="feature-index">02</span>
-                  <h3>Feature Showcase Section</h3>
+                  <h3>Dark Editor Workspace</h3>
                   <p>
-                    Dedicated content blocks highlight what the platform offers
-                    with strong hierarchy and an easy-to-scan layout.
+                    The main editor uses a dark software-style shell with a top
+                    command bar, centered button canvas, right inspector, and
+                    bottom layer tabs.
                   </p>
                 </article>
 
                 <article class="feature-card">
                   <span class="feature-index">03</span>
-                  <h3>System Preview Experience</h3>
+                  <h3>Live Layer Editing</h3>
                   <p>
-                    Product mockups and interface-inspired visuals give users a
-                    clear look at the system before downloading it.
+                    Text, font, color, rotate, stretch, transparency, and layer
+                    visibility update the circular preview in real time.
                   </p>
                 </article>
 
                 <article class="feature-card">
                   <span class="feature-index">04</span>
-                  <h3>Download-Ready Flow</h3>
+                  <h3>Photo Upload and Crop</h3>
                   <p>
-                    Focused CTA placement supports a direct path from browsing
-                    to application download without unnecessary friction.
+                    The photo layer supports upload, crop selection, direct drag
+                    movement inside the button preview, and centering controls.
                   </p>
                 </article>
 
                 <article class="feature-card">
                   <span class="feature-index">05</span>
-                  <h3>Clear Navigation</h3>
+                  <h3>Undo and Redo History</h3>
                   <p>
-                    Organized content sections and a clean navigation bar help
-                    users move through the page with confidence.
+                    Text edits, slider changes, visibility toggles, image
+                    movement, and crop updates are tracked through history.
                   </p>
                 </article>
 
                 <article class="feature-card">
                   <span class="feature-index">06</span>
-                  <h3>Consistent HCI-Driven Design</h3>
+                  <h3>Print and PDF Export</h3>
                   <p>
-                    Consistency, visual hierarchy, and clarity shape the entire
-                    interface for a more intuitive browsing experience.
+                    The print screen filters eligible layers, supports drag and
+                    drop placement, and exports a working PDF with PDFBox.
                   </p>
                 </article>
               </div>
             </div>
 
-            <aside class="highlight-board" aria-label="PinCraft system highlights">
+            <aside class="highlight-board" aria-label="Pin Button Maker system highlights">
               <div class="feature-board-head">
                 <p class="panel-kicker">System Highlights</p>
-                <strong>Core capabilities users can discover before installation.</strong>
+                <strong>The key workflow rules come straight from the Swing specification.</strong>
               </div>
 
               <div class="highlight-grid">
                 <article class="highlight-card">
                   <span class="highlight-chip">Core 01</span>
-                  <h3>Design Customization</h3>
+                  <h3>Four-Screen Flow</h3>
                   <p>
-                    Create tailored button pin concepts with a more flexible and
-                    visually guided customization flow.
+                    Mock login reaches Home, Start New Project opens Editor,
+                    Print completes the workflow, and Log Out returns to Login.
                   </p>
                 </article>
 
                 <article class="highlight-card">
                   <span class="highlight-chip">Core 02</span>
-                  <h3>Real-Time Preview</h3>
+                  <h3>Accurate Layer Rules</h3>
                   <p>
-                    See how design decisions translate into a polished final
-                    result through immediate visual feedback.
+                    Hidden layers and layers with zero transparency stay out of
+                    the print gallery exactly as required in the editor logic.
                   </p>
                 </article>
 
                 <article class="highlight-card">
                   <span class="highlight-chip">Core 03</span>
-                  <h3>Project Management</h3>
+                  <h3>Paper and Button Options</h3>
                   <p>
-                    Organize creative work, assets, and production tasks within
-                    one more structured system experience.
+                    Print layout responds to the chosen button size while users
+                    switch between A4 or Letter and optionally show cut lines.
                   </p>
                 </article>
               </div>
@@ -277,20 +352,20 @@
           </div>
         </section>
 
-        <section class="preview-section" id="preview">
+<section class="preview-section" id="preview">
           <div class="preview-section-intro">
             <div>
               <p class="section-kicker">Preview</p>
               <h2>
-                Explore PinCraft through a refined gallery of
-                <span>product-style interface previews</span>.
+                Preview the interface through views that match the
+                <span>Java Swing editor, sidebar, and print workflow</span>.
               </h2>
             </div>
 
             <p class="preview-section-lead">
-              This dedicated screenshot area presents the system in a premium,
-              product-focused way so users can understand the flow of
-              customization, preview, and organization before downloading.
+              These panels are now aligned to the real desktop prototype so the
+              website explains the same editor controls, layer behavior, and
+              print composition rules described in the build prompt.
             </p>
           </div>
 
@@ -303,23 +378,94 @@
                     <span></span>
                     <span></span>
                   </div>
-                  <div class="screenshot-pill">Workspace Overview</div>
+                  <div class="screenshot-pill">EditorPage</div>
                 </div>
 
                 <div class="screenshot-body screenshot-body-workspace">
-                  <figure class="desktop-preview-image-shell desktop-preview-image-shell-featured">
-                    <img
-                      class="system-screenshot system-screenshot-editor"
-                      src="assets/pin-button-maker-editor-preview.png"
-                      alt="Pin Button Maker desktop editor preview showing the pin canvas, toolbar, layer tabs, and right-side transform controls"
-                    />
-                  </figure>
+                  <div class="desktop-editor-frame desktop-editor-frame-preview" aria-label="Pin Button Maker editor preview with toolbar, circular canvas, and sidebar controls">
+                    <div class="editor-command-bar" aria-hidden="true">
+                      <span>Save</span>
+                      <span>Load</span>
+                      <span class="active-button">Upload Image</span>
+                      <span>Add Photo</span>
+                      <span>Add Text</span>
+                      <span>Home</span>
+                      <span>Print &rarr;</span>
+                    </div>
+
+                    <div class="editor-main-grid">
+                      <div class="editor-stage">
+                        <div class="pin-button-preview pin-button-preview-editor" aria-hidden="true">
+                          <span class="pin-button-guide"></span>
+                          <span class="pin-button-surface"></span>
+                          <span class="pin-button-ring"></span>
+                          <span class="pin-button-label pin-button-label-editor-top">Hello</span>
+                          <span class="pin-button-photo pin-button-photo-editor"></span>
+                          <span class="pin-button-label pin-button-label-editor-bottom">PinCraft</span>
+                        </div>
+                      </div>
+
+                      <aside class="editor-inspector">
+                        <div class="inspector-block">
+                          <h3>Text section</h3>
+                          <p>Active Layer: Text 1</p>
+                          <span class="inspector-label">Text</span>
+                          <span class="inspector-field">PinCraft</span>
+                          <span class="inspector-label">Font</span>
+                          <span class="inspector-select">Poppins</span>
+                          <span class="inspector-label">Color</span>
+                          <span class="inspector-field inspector-field-strong">Color #282E3A</span>
+                          <div class="inspector-slider-row inspector-slider-row-bend">
+                            <label>Bend</label>
+                            <span class="inspector-slider slider-bend"></span>
+                            <small>0 deg</small>
+                            <span class="inspector-inline-icon" aria-hidden="true">&#8635;</span>
+                          </div>
+                          <div class="inspector-inline-actions" aria-hidden="true">
+                            <span class="inspector-inline-button inspector-inline-button-wide">Reset Text Position</span>
+                            <span class="inspector-inline-button">&#8596;</span>
+                            <span class="inspector-inline-button">&#8597;</span>
+                          </div>
+                        </div>
+
+                        <div class="inspector-block">
+                          <h3>Transform section</h3>
+                          <div class="inspector-slider-row">
+                            <label>Size</label>
+                            <span class="inspector-slider slider-size-editor"></span>
+                            <small>100%</small>
+                          </div>
+                          <div class="inspector-slider-row">
+                            <label>Rotate</label>
+                            <span class="inspector-slider slider-rotate-editor"></span>
+                            <small>0 deg</small>
+                          </div>
+                          <div class="inspector-slider-row">
+                            <label>Stretch</label>
+                            <span class="inspector-slider slider-stretch-editor"></span>
+                            <small>100%</small>
+                          </div>
+                          <div class="inspector-slider-row">
+                            <label>Transparency</label>
+                            <span class="inspector-slider slider-transparency-editor"></span>
+                            <small>100%</small>
+                          </div>
+                        </div>
+                      </aside>
+                    </div>
+
+                    <div class="editor-tabbar editor-tabbar-editor" aria-hidden="true">
+                      <span class="editor-tab"><strong>Photo</strong><small>&times;</small></span>
+                      <span class="editor-tab active"><strong>Text 1</strong><small>&times;</small></span>
+                      <span class="editor-tab"><strong>Text 2</strong><small>&times;</small></span>
+                    </div>
+                  </div>
                 </div>
               </div>
 
               <div class="screenshot-copy">
                 <p class="panel-kicker">Main Preview</p>
-                <h3>See the desktop editor flow through a dark command bar, centered pin canvas, right-side controls, and bottom layer tabs.</h3>
+                <h3>See the editor with save, load, size, upload, real-size, print, and log-out controls wrapped around the centered button preview.</h3>
               </div>
             </article>
 
@@ -331,40 +477,85 @@
                     <span></span>
                     <span></span>
                   </div>
-                  <div class="screenshot-pill">Customization View</div>
+                  <div class="screenshot-pill">Right Sidebar</div>
                 </div>
 
                 <div class="screenshot-body screenshot-body-custom">
-                  <div class="inspector-focus-shot">
-                    <div class="inspector-block">
-                      <h3>Text section</h3>
-                      <p>Active Layer: Photo</p>
-                      <span class="inspector-label">Text</span>
-                      <span class="inspector-field">Photo layer is not text-editable.</span>
-                      <span class="inspector-label">Font</span>
-                      <span class="inspector-select">SansSerif</span>
-                      <span class="inspector-label">Color</span>
-                      <span class="inspector-field">Color: #39414C</span>
-                    </div>
+                  <div class="sidebar-stage-shot">
+                    <div class="sidebar-stage-layout">
+                      <div class="sidebar-stage-column">
+                        <section class="inspector-block sidebar-shot-card">
+                          <h3>Text section</h3>
+                          <p>Active Layer: Text 1</p>
+                          <span class="inspector-label">Text</span>
+                          <span class="inspector-field">PinCraft</span>
+                          <span class="inspector-label">Font</span>
+                          <span class="inspector-select">SansSerif</span>
+                          <span class="inspector-label">Color</span>
+                          <span class="inspector-field inspector-field-strong">Color: #282E3A</span>
 
-                    <div class="inspector-block">
-                      <h3>Transform section</h3>
-                      <div class="inspector-slider-row">
-                        <label>Size</label>
-                        <span class="inspector-slider slider-size"></span>
-                        <small>100%</small>
+                          <div class="sidebar-slider-group">
+                            <label>Bend</label>
+                            <div class="sidebar-slider-line">
+                              <span class="inspector-slider slider-bend"></span>
+                              <small>0 deg</small>
+                              <span class="inspector-inline-icon sidebar-shot-icon" aria-hidden="true">&#8635;</span>
+                            </div>
+                          </div>
+
+                          <div class="inspector-inline-actions sidebar-shot-actions" aria-hidden="true">
+                            <span class="inspector-inline-button inspector-inline-button-wide">Reset Text Position</span>
+                            <span class="inspector-inline-button">&#8596;</span>
+                            <span class="inspector-inline-button">&#8597;</span>
+                          </div>
+                        </section>
+
+                        <section class="inspector-block sidebar-shot-card sidebar-shot-card-transform">
+                          <h3>Transform section</h3>
+
+                          <div class="sidebar-slider-group">
+                            <label>Size</label>
+                            <div class="sidebar-slider-line">
+                              <span class="inspector-slider slider-size-editor"></span>
+                              <small>100%</small>
+                              <span class="inspector-inline-icon sidebar-shot-icon" aria-hidden="true">&#8635;</span>
+                            </div>
+                          </div>
+
+                          <div class="sidebar-slider-group">
+                            <label>Rotate</label>
+                            <div class="sidebar-slider-line">
+                              <span class="inspector-slider slider-rotate-editor"></span>
+                              <small>0 deg</small>
+                              <span class="inspector-inline-icon sidebar-shot-icon" aria-hidden="true">&#8635;</span>
+                            </div>
+                          </div>
+
+                          <div class="sidebar-slider-group">
+                            <label>Stretch</label>
+                            <div class="sidebar-slider-line">
+                              <span class="inspector-slider slider-stretch-editor"></span>
+                              <small>100%</small>
+                              <span class="inspector-inline-icon sidebar-shot-icon" aria-hidden="true">&#8635;</span>
+                            </div>
+                          </div>
+
+                          <div class="sidebar-slider-group">
+                            <label>Transparency</label>
+                            <div class="sidebar-slider-line">
+                              <span class="inspector-slider slider-transparency-editor"></span>
+                              <small>100%</small>
+                              <span class="inspector-inline-icon sidebar-shot-icon" aria-hidden="true">&#8635;</span>
+                            </div>
+                          </div>
+
+                          <span class="inspector-label">Button Background</span>
+                          <span class="inspector-field inspector-field-bright sidebar-shot-background">Background: #F7F9FD</span>
+                        </section>
+
                       </div>
-                      <div class="inspector-slider-row">
-                        <label>Rotate</label>
-                        <span class="inspector-slider slider-rotate"></span>
-                        <small>0 deg</small>
-                      </div>
-                      <div class="inspector-slider-row">
-                        <label>Transparency</label>
-                        <span class="inspector-slider slider-transparency"></span>
-                        <small>100%</small>
-                      </div>
-                      <span class="inspector-button">Upload Photo</span>
+
+                      <div class="sidebar-stage-blank" aria-hidden="true"></div>
                     </div>
                   </div>
                 </div>
@@ -372,7 +563,7 @@
 
               <div class="screenshot-copy">
                 <p class="panel-kicker">Customization</p>
-                <h3>The inspector panel mirrors your real text, font, color, size, rotate, and transparency controls.</h3>
+                <h3>The inspector mirrors the requested text, font, color, size, rotate, stretch, transparency, and photo upload behavior.</h3>
               </div>
             </article>
 
@@ -384,7 +575,7 @@
                     <span></span>
                     <span></span>
                   </div>
-                  <div class="screenshot-pill">Real-Time Feedback</div>
+                  <div class="screenshot-pill">PrintPage Controls</div>
                 </div>
 
                 <div class="screenshot-body screenshot-body-stats">
@@ -406,146 +597,84 @@
 
               <div class="screenshot-copy">
                 <p class="panel-kicker">Print Settings</p>
-                <h3>The print screen lets users choose button size, switch between A4 or Letter paper, enable cut lines, and export directly to PDF.</h3>
+                <h3>The print page lets users choose button size, switch between A4 or Letter, enable cut lines, and export through PDFBox.</h3>
               </div>
             </article>
 
-            <article class="screenshot-card screenshot-card-library">
-              <div class="screenshot-frame">
-                <div class="screenshot-topbar">
-                  <div class="screenshot-dots" aria-hidden="true">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                  </div>
-                  <div class="screenshot-pill">Project Library</div>
-                </div>
-
-                <div class="screenshot-body screenshot-body-library">
-                  <div class="a4-preview-shot">
-                    <div class="a4-paper-stage">
-                      <div class="a4-paper-sheet">
-                        <p class="paper-caption">A4 Preview | 2.25" + 1 cm | 6 pins</p>
-                        <div class="a4-pin-grid" aria-hidden="true">
-                          <span class="a4-pin a4-pin-filled"></span>
-                          <span class="a4-pin"></span>
-                          <span class="a4-pin"></span>
-                          <span class="a4-pin"></span>
-                          <span class="a4-pin"></span>
-                          <span class="a4-pin"></span>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="a4-settings-panel">
-                      <div class="a4-settings-card">
-                        <strong>Print Settings</strong>
-                        <span class="settings-field">A4 (210 x 297 mm)</span>
-                        <span class="settings-field">2.25"</span>
-                        <div class="settings-buttons">
-                          <span>Back</span>
-                          <span>Download PDF</span>
-                        </div>
-                      </div>
-
-                      <div class="a4-settings-card">
-                        <strong>Printable Items</strong>
-                        <div class="printable-list-card">
-                          <span class="printable-list-thumb"></span>
-                          <div>
-                            <span>2.25" pin</span>
-                            <small>Ready for print placement</small>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="screenshot-copy">
-                <p class="panel-kicker">Paper Preview</p>
-                <h3>The final print workflow arranges pin placements based on the selected button size with support for both A4 and Letter paper.</h3>
-              </div>
-            </article>
           </div>
         </section>
 
-        <section class="download-section" id="download">
+<section class="download-section" id="download">
           <div class="download-shell">
             <div class="download-copy">
-              <p class="section-kicker">Download</p>
+              <p class="section-kicker">Prototype</p>
               <h2>
-                Bring PinCraft to your workflow and start exploring a
-                <span>cleaner, more polished customization experience</span>.
+                Review the full Swing-only desktop flow before moving into
+                <span>implementation, testing, and final packaging</span>.
               </h2>
               <p class="download-text">
-                Discover the platform through its premium preview experience,
-                then move directly into the application with a focused download
-                flow designed to feel simple, clear, and ready for action.
+                This landing page now summarizes the same screens, controls,
+                layer rules, print behavior, and export flow defined in the
+                Java prompt so the visual direction stays aligned before coding.
               </p>
             </div>
 
             <div class="download-actions">
-              <a class="btn btn-download" href="#download">Download Application</a>
+              <a class="btn btn-download" href="preview.html">Review Screen Flow</a>
               <p class="download-note">
-                Preview the system, understand the workflow, and install when
-                you're ready.
+                Static website reference for the desktop build: Login, Home,
+                Editor, Print, and PDF export.
               </p>
             </div>
           </div>
         </section>
 
-        <section class="about-section" id="about">
+<section class="about-section" id="about">
           <div class="about-intro">
-            <p class="section-kicker">About PinCraft</p>
+            <p class="section-kicker">About The App</p>
             <h2>
-              A clean promotional experience built to present
-              <span>custom button pin creation</span>
-              with clarity and confidence.
+              A Java Swing-only prototype built for
+              <span>button editing, layer control, and print preparation</span>.
             </h2>
           </div>
 
           <div class="about-grid">
             <div class="about-copy">
               <p>
-                PinCraft is a web-based promotional platform developed using
-                HTML and CSS that showcases a button pin customization system.
-                It serves as an advertisement page where users can explore the
-                system's features, view interface previews, and understand how
-                the platform works before downloading the application.
+                Pin Button Maker is defined as a modular Java Swing desktop app
+                that uses CardLayout to move between LoginPage, HomePage,
+                EditorPage, and PrintPage while preserving shared project data.
               </p>
 
               <p>
-                The experience is intentionally clean and organized, using
-                structured sections, visual mockups, and focused content blocks
-                to guide attention naturally. The layout is designed to feel
-                modern and approachable while still presenting the product with
-                a refined, premium tone.
+                The editor centers a Graphics2D circular preview inside a dark
+                software-style workspace, with text controls, transform
+                sliders, layer tabs, photo upload, drag repositioning, and crop
+                support tied to the active layer.
               </p>
 
               <p>
-                Through this website, users are introduced to PinCraft's core
-                capabilities, including design customization, real-time preview,
-                and project management, making it an effective preview and
-                download platform for new users.
+                The print flow imports only eligible visible layers from the
+                editor, lets users place them onto A4 or Letter paper, and
+                exports a real PDF through Apache PDFBox.
               </p>
             </div>
 
-            <aside class="about-panel" aria-label="PinCraft interface principles">
+            <aside class="about-panel" aria-label="Pin Button Maker interface principles">
               <div class="about-panel-top">
                 <p class="panel-kicker">HCI Principles</p>
-                <strong>Designed for a user-friendly browsing experience</strong>
+                <strong>Designed around clarity, direct manipulation, and consistent desktop interaction</strong>
               </div>
 
               <div class="principles-list">
                 <article class="principle-item">
                   <span class="principle-badge">01</span>
                   <div>
-                    <h3>Visual Hierarchy</h3>
+                    <h3>Direct Manipulation</h3>
                     <p>
-                      Clear headlines, balanced spacing, and layered sections
-                      help users understand the most important information first.
+                      Dragging photos inside the button preview and placing
+                      printable items onto paper keeps editing visual and
+                      immediate.
                     </p>
                   </div>
                 </article>
@@ -553,10 +682,10 @@
                 <article class="principle-item">
                   <span class="principle-badge">02</span>
                   <div>
-                    <h3>Consistency</h3>
+                    <h3>Consistent Controls</h3>
                     <p>
-                      Repeated patterns in spacing, typography, buttons, and
-                      cards create a stable and trustworthy browsing flow.
+                      Toolbar buttons, sidebar inputs, and layer tabs follow one
+                      repeatable system so the editor stays predictable.
                     </p>
                   </div>
                 </article>
@@ -564,39 +693,39 @@
                 <article class="principle-item">
                   <span class="principle-badge">03</span>
                   <div>
-                    <h3>Clarity</h3>
+                    <h3>Workflow Clarity</h3>
                     <p>
-                      Focused messaging and clean visual grouping make the
-                      platform's purpose, features, and download path easy to
-                      understand.
+                      Login, project start, editing, and printing remain
+                      separate stages while shared state keeps the experience
+                      connected.
                     </p>
                   </div>
                 </article>
               </div>
 
               <div class="about-capabilities">
-                <span>Design Customization</span>
-                <span>Real-Time Preview</span>
-                <span>Project Management</span>
+                <span>CardLayout Navigation</span>
+                <span>Layer-Based Editing</span>
+                <span>PDF Export</span>
               </div>
             </aside>
           </div>
         </section>
 
-        <section class="members-section" id="members">
+<section class="members-section" id="members">
           <div class="members-intro">
             <div>
               <p class="section-kicker">Members</p>
               <h2>
                 Meet the team behind
-                <span>PinCraft's polished academic presentation</span>.
+                <span>the Pin Button Maker desktop prototype</span>.
               </h2>
             </div>
 
             <p class="members-lead">
-              This section highlights the project members through a clean,
-              professional layout that keeps profiles readable, consistent, and
-              visually aligned with the rest of the landing page.
+              This section presents the members responsible for planning,
+              interface design, system behavior, documentation, and final
+              review of the Swing-based academic project.
             </p>
           </div>
 
@@ -609,8 +738,8 @@
                 <p class="member-role">Frontend Developer and UI Designer</p>
                 <p class="member-description">
                   Focuses on shaping the visual direction, refining layout
-                  decisions, and ensuring the PinCraft experience feels modern,
-                  polished, and user-centered.
+                  decisions, and ensuring the Pin Button Maker presentation
+                  feels modern, polished, and accurate to the app flow.
                 </p>
               </div>
             </article>
@@ -673,23 +802,23 @@
       <footer class="site-footer">
         <div class="footer-shell">
           <div class="footer-brand">
-            <a class="footer-mark" href="#home">PinCraft</a>
+            <a class="footer-mark" href="#home">Pin Button Maker</a>
             <p>
-              A polished static landing page that presents customization,
-              preview, and project organization with a calm, premium visual
-              system.
+              A polished static landing page that summarizes the Java Swing
+              editor, print workflow, shared state, and PDF export behavior of
+              the desktop prototype.
             </p>
           </div>
 
           <div class="footer-links" aria-label="Footer navigation">
             <a href="#features">Features</a>
             <a href="#preview">Preview</a>
-            <a href="#download">Download</a>
+            <a href="#download">Prototype</a>
             <a href="#about">About</a>
             <a href="#members">Members</a>
           </div>
 
-          <p class="footer-meta">PinCraft Academic Presentation</p>
+          <p class="footer-meta">Java Swing Desktop Prototype</p>
         </div>
       </footer>
     </div>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pin Button Maker | Features</title>
+    <meta
+      name="description"
+      content="Features page for the Pin Button Maker Java Swing desktop prototype."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="standalone-page page-features">
+    <div class="page-shell">
+      <div class="bg-orb orb-one" aria-hidden="true"></div>
+      <div class="bg-orb orb-two" aria-hidden="true"></div>
+      <div class="bg-grid" aria-hidden="true"></div>
+
+      <header class="site-header">
+        <nav class="navbar" aria-label="Primary">
+          <a class="brand" href="index.html" aria-label="Pin Button Maker home">Pin Button Maker</a>
+
+          <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="features.html">Features</a>
+            <a href="preview.html">Preview</a>
+            <a href="prototype.html">Prototype</a>
+            <a href="about.html">About</a>
+            <a href="members.html">Members</a>
+          </div>
+
+          <a class="btn btn-nav" href="preview.html">Review Prototype</a>
+        </nav>
+      </header>
+
+      <main>
+        <section class="features-section" id="features">
+          <div class="features-intro">
+            <div>
+              <p class="section-kicker">Features</p>
+              <h2>
+                Explore the desktop flow through features that mirror the
+                <span>real Java Swing screens, layers, and print logic</span>.
+              </h2>
+            </div>
+
+            <p class="features-lead">
+              This page now presents the same behavior described in your
+              prototype brief, from CardLayout navigation and shared state to
+              layer editing, print composition, and PDF export.
+            </p>
+          </div>
+
+          <div class="feature-showcase">
+            <div class="feature-board">
+              <div class="feature-board-head">
+                <p class="panel-kicker">Desktop App Features</p>
+                <strong>Each feature block maps directly to the requested Swing-only prototype.</strong>
+              </div>
+
+              <div class="feature-grid">
+                <article class="feature-card">
+                  <span class="feature-index">01</span>
+                  <h3>CardLayout Navigation</h3>
+                  <p>
+                    LoginPage, HomePage, EditorPage, and PrintPage are framed as
+                    one clear desktop flow driven by CardLayout page changes.
+                  </p>
+                </article>
+
+                <article class="feature-card">
+                  <span class="feature-index">02</span>
+                  <h3>Dark Editor Workspace</h3>
+                  <p>
+                    The main editor uses a dark software-style shell with a top
+                    command bar, centered button canvas, right inspector, and
+                    bottom layer tabs.
+                  </p>
+                </article>
+
+                <article class="feature-card">
+                  <span class="feature-index">03</span>
+                  <h3>Live Layer Editing</h3>
+                  <p>
+                    Text, font, color, rotate, stretch, transparency, and layer
+                    visibility update the circular preview in real time.
+                  </p>
+                </article>
+
+                <article class="feature-card">
+                  <span class="feature-index">04</span>
+                  <h3>Photo Upload and Crop</h3>
+                  <p>
+                    The photo layer supports upload, crop selection, direct drag
+                    movement inside the button preview, and centering controls.
+                  </p>
+                </article>
+
+                <article class="feature-card">
+                  <span class="feature-index">05</span>
+                  <h3>Undo and Redo History</h3>
+                  <p>
+                    Text edits, slider changes, visibility toggles, image
+                    movement, and crop updates are tracked through history.
+                  </p>
+                </article>
+
+                <article class="feature-card">
+                  <span class="feature-index">06</span>
+                  <h3>Print and PDF Export</h3>
+                  <p>
+                    The print screen filters eligible layers, supports drag and
+                    drop placement, and exports a working PDF with PDFBox.
+                  </p>
+                </article>
+              </div>
+            </div>
+
+            <aside class="highlight-board" aria-label="Pin Button Maker system highlights">
+              <div class="feature-board-head">
+                <p class="panel-kicker">System Highlights</p>
+                <strong>The key workflow rules come straight from the Swing specification.</strong>
+              </div>
+
+              <div class="highlight-grid">
+                <article class="highlight-card">
+                  <span class="highlight-chip">Core 01</span>
+                  <h3>Four-Screen Flow</h3>
+                  <p>
+                    Mock login reaches Home, Start New Project opens Editor,
+                    Print completes the workflow, and Log Out returns to Login.
+                  </p>
+                </article>
+
+                <article class="highlight-card">
+                  <span class="highlight-chip">Core 02</span>
+                  <h3>Accurate Layer Rules</h3>
+                  <p>
+                    Hidden layers and layers with zero transparency stay out of
+                    the print gallery exactly as required in the editor logic.
+                  </p>
+                </article>
+
+                <article class="highlight-card">
+                  <span class="highlight-chip">Core 03</span>
+                  <h3>Paper and Button Options</h3>
+                  <p>
+                    Print layout responds to the chosen button size while users
+                    switch between A4 or Letter and optionally show cut lines.
+                  </p>
+                </article>
+              </div>
+            </aside>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="footer-shell">
+          <div class="footer-brand">
+            <a class="footer-mark" href="index.html">Pin Button Maker</a>
+            <p>
+              A polished static landing page that summarizes the Java Swing
+              editor, print workflow, shared state, and PDF export behavior of
+              the desktop prototype.
+            </p>
+          </div>
+
+          <div class="footer-links" aria-label="Footer navigation">
+            <a href="features.html">Features</a>
+            <a href="preview.html">Preview</a>
+            <a href="prototype.html">Prototype</a>
+            <a href="about.html">About</a>
+            <a href="members.html">Members</a>
+          </div>
+
+          <p class="footer-meta">Java Swing Desktop Prototype</p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
+
+

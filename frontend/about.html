@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pin Button Maker | About</title>
+    <meta
+      name="description"
+      content="About page for the Pin Button Maker Java Swing desktop prototype."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="standalone-page page-about">
+    <div class="page-shell">
+      <div class="bg-orb orb-one" aria-hidden="true"></div>
+      <div class="bg-orb orb-two" aria-hidden="true"></div>
+      <div class="bg-grid" aria-hidden="true"></div>
+
+      <header class="site-header">
+        <nav class="navbar" aria-label="Primary">
+          <a class="brand" href="index.html" aria-label="Pin Button Maker home">Pin Button Maker</a>
+
+          <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="features.html">Features</a>
+            <a href="preview.html">Preview</a>
+            <a href="prototype.html">Prototype</a>
+            <a href="about.html">About</a>
+            <a href="members.html">Members</a>
+          </div>
+
+          <a class="btn btn-nav" href="preview.html">Review Prototype</a>
+        </nav>
+      </header>
+
+      <main>
+        <section class="about-section" id="about">
+          <div class="about-intro">
+            <p class="section-kicker">About The App</p>
+            <h2>
+              A Java Swing-only prototype built for
+              <span>button editing, layer control, and print preparation</span>.
+            </h2>
+          </div>
+
+          <div class="about-grid">
+            <div class="about-copy">
+              <p>
+                Pin Button Maker is defined as a modular Java Swing desktop app
+                that uses CardLayout to move between LoginPage, HomePage,
+                EditorPage, and PrintPage while preserving shared project data.
+              </p>
+
+              <p>
+                The editor centers a Graphics2D circular preview inside a dark
+                software-style workspace, with text controls, transform
+                sliders, layer tabs, photo upload, drag repositioning, and crop
+                support tied to the active layer.
+              </p>
+
+              <p>
+                The print flow imports only eligible visible layers from the
+                editor, lets users place them onto A4 or Letter paper, and
+                exports a real PDF through Apache PDFBox.
+              </p>
+            </div>
+
+            <aside class="about-panel" aria-label="Pin Button Maker interface principles">
+              <div class="about-panel-top">
+                <p class="panel-kicker">HCI Principles</p>
+                <strong>Designed around clarity, direct manipulation, and consistent desktop interaction</strong>
+              </div>
+
+              <div class="principles-list">
+                <article class="principle-item">
+                  <span class="principle-badge">01</span>
+                  <div>
+                    <h3>Direct Manipulation</h3>
+                    <p>
+                      Dragging photos inside the button preview and placing
+                      printable items onto paper keeps editing visual and
+                      immediate.
+                    </p>
+                  </div>
+                </article>
+
+                <article class="principle-item">
+                  <span class="principle-badge">02</span>
+                  <div>
+                    <h3>Consistent Controls</h3>
+                    <p>
+                      Toolbar buttons, sidebar inputs, and layer tabs follow one
+                      repeatable system so the editor stays predictable.
+                    </p>
+                  </div>
+                </article>
+
+                <article class="principle-item">
+                  <span class="principle-badge">03</span>
+                  <div>
+                    <h3>Workflow Clarity</h3>
+                    <p>
+                      Login, project start, editing, and printing remain
+                      separate stages while shared state keeps the experience
+                      connected.
+                    </p>
+                  </div>
+                </article>
+              </div>
+
+              <div class="about-capabilities">
+                <span>CardLayout Navigation</span>
+                <span>Layer-Based Editing</span>
+                <span>PDF Export</span>
+              </div>
+            </aside>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="footer-shell">
+          <div class="footer-brand">
+            <a class="footer-mark" href="index.html">Pin Button Maker</a>
+            <p>
+              A polished static landing page that summarizes the Java Swing
+              editor, print workflow, shared state, and PDF export behavior of
+              the desktop prototype.
+            </p>
+          </div>
+
+          <div class="footer-links" aria-label="Footer navigation">
+            <a href="features.html">Features</a>
+            <a href="preview.html">Preview</a>
+            <a href="prototype.html">Prototype</a>
+            <a href="about.html">About</a>
+            <a href="members.html">Members</a>
+          </div>
+
+          <p class="footer-meta">Java Swing Desktop Prototype</p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
+
+

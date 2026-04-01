@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pin Button Maker | Preview</title>
+    <meta
+      name="description"
+      content="Preview page for the Pin Button Maker Java Swing desktop prototype."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="standalone-page page-preview">
+    <div class="page-shell">
+      <div class="bg-orb orb-one" aria-hidden="true"></div>
+      <div class="bg-orb orb-two" aria-hidden="true"></div>
+      <div class="bg-grid" aria-hidden="true"></div>
+
+      <header class="site-header">
+        <nav class="navbar" aria-label="Primary">
+          <a class="brand" href="index.html" aria-label="Pin Button Maker home">Pin Button Maker</a>
+
+          <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="features.html">Features</a>
+            <a href="preview.html">Preview</a>
+            <a href="prototype.html">Prototype</a>
+            <a href="about.html">About</a>
+            <a href="members.html">Members</a>
+          </div>
+
+          <a class="btn btn-nav" href="preview.html">Review Prototype</a>
+        </nav>
+      </header>
+
+      <main>
+        <section class="preview-section" id="preview">
+          <div class="preview-section-intro">
+            <div>
+              <p class="section-kicker">Preview</p>
+              <h2>
+                Preview the interface through views that match the
+                <span>Java Swing editor, sidebar, and print workflow</span>.
+              </h2>
+            </div>
+
+            <p class="preview-section-lead">
+              These panels are now aligned to the real desktop prototype so the
+              website explains the same editor controls, layer behavior, and
+              print composition rules described in the build prompt.
+            </p>
+          </div>
+
+          <div class="preview-gallery">
+            <article class="screenshot-card screenshot-card-featured">
+              <div class="screenshot-frame">
+                <div class="screenshot-topbar">
+                  <div class="screenshot-dots" aria-hidden="true">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+                  <div class="screenshot-pill">EditorPage</div>
+                </div>
+
+                <div class="screenshot-body screenshot-body-workspace">
+                  <div class="desktop-editor-frame desktop-editor-frame-preview" aria-label="Pin Button Maker editor preview with toolbar, circular canvas, and sidebar controls">
+                    <div class="editor-command-bar" aria-hidden="true">
+                      <span>Save</span>
+                      <span>Load</span>
+                      <span class="active-button">Upload Image</span>
+                      <span>Add Photo</span>
+                      <span>Add Text</span>
+                      <span>Home</span>
+                      <span>Print &rarr;</span>
+                    </div>
+
+                    <div class="editor-main-grid">
+                      <div class="editor-stage">
+                        <div class="pin-button-preview pin-button-preview-editor" aria-hidden="true">
+                          <span class="pin-button-guide"></span>
+                          <span class="pin-button-surface"></span>
+                          <span class="pin-button-ring"></span>
+                          <span class="pin-button-label pin-button-label-editor-top">Hello</span>
+                          <span class="pin-button-photo pin-button-photo-editor"></span>
+                          <span class="pin-button-label pin-button-label-editor-bottom">PinCraft</span>
+                        </div>
+                      </div>
+
+                      <aside class="editor-inspector">
+                        <div class="inspector-block">
+                          <h3>Text section</h3>
+                          <p>Active Layer: Text 1</p>
+                          <span class="inspector-label">Text</span>
+                          <span class="inspector-field">PinCraft</span>
+                          <span class="inspector-label">Font</span>
+                          <span class="inspector-select">Poppins</span>
+                          <span class="inspector-label">Color</span>
+                          <span class="inspector-field inspector-field-strong">Color #282E3A</span>
+                          <div class="inspector-slider-row inspector-slider-row-bend">
+                            <label>Bend</label>
+                            <span class="inspector-slider slider-bend"></span>
+                            <small>0 deg</small>
+                            <span class="inspector-inline-icon" aria-hidden="true">&#8635;</span>
+                          </div>
+                          <div class="inspector-inline-actions" aria-hidden="true">
+                            <span class="inspector-inline-button inspector-inline-button-wide">Reset Text Position</span>
+                            <span class="inspector-inline-button">&#8596;</span>
+                            <span class="inspector-inline-button">&#8597;</span>
+                          </div>
+                        </div>
+
+                        <div class="inspector-block">
+                          <h3>Transform section</h3>
+                          <div class="inspector-slider-row">
+                            <label>Size</label>
+                            <span class="inspector-slider slider-size-editor"></span>
+                            <small>100%</small>
+                          </div>
+                          <div class="inspector-slider-row">
+                            <label>Rotate</label>
+                            <span class="inspector-slider slider-rotate-editor"></span>
+                            <small>0 deg</small>
+                          </div>
+                          <div class="inspector-slider-row">
+                            <label>Stretch</label>
+                            <span class="inspector-slider slider-stretch-editor"></span>
+                            <small>100%</small>
+                          </div>
+                          <div class="inspector-slider-row">
+                            <label>Transparency</label>
+                            <span class="inspector-slider slider-transparency-editor"></span>
+                            <small>100%</small>
+                          </div>
+                        </div>
+                      </aside>
+                    </div>
+
+                    <div class="editor-tabbar editor-tabbar-editor" aria-hidden="true">
+                      <span class="editor-tab"><strong>Photo</strong><small>&times;</small></span>
+                      <span class="editor-tab active"><strong>Text 1</strong><small>&times;</small></span>
+                      <span class="editor-tab"><strong>Text 2</strong><small>&times;</small></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="screenshot-copy">
+                <p class="panel-kicker">Main Preview</p>
+                <h3>See the editor with save, load, size, upload, real-size, print, and log-out controls wrapped around the centered button preview.</h3>
+              </div>
+            </article>
+
+            <article class="screenshot-card screenshot-card-custom">
+              <div class="screenshot-frame">
+                <div class="screenshot-topbar">
+                  <div class="screenshot-dots" aria-hidden="true">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+                  <div class="screenshot-pill">Right Sidebar</div>
+                </div>
+
+                <div class="screenshot-body screenshot-body-custom">
+                  <div class="inspector-focus-shot">
+                    <div class="inspector-block">
+                      <h3>Text section</h3>
+                      <p>Active Layer: Text 1</p>
+                      <span class="inspector-label">Text</span>
+                      <span class="inspector-field">PinCraft</span>
+                      <span class="inspector-label">Font</span>
+                      <span class="inspector-select">Poppins</span>
+                      <span class="inspector-label">Color</span>
+                      <span class="inspector-field inspector-field-strong">Color #282E3A</span>
+                      <div class="inspector-slider-row inspector-slider-row-bend">
+                        <label>Bend</label>
+                        <span class="inspector-slider slider-bend"></span>
+                        <small>0 deg</small>
+                        <span class="inspector-inline-icon" aria-hidden="true">&#8635;</span>
+                      </div>
+                      <div class="inspector-inline-actions" aria-hidden="true">
+                        <span class="inspector-inline-button inspector-inline-button-wide">Reset Text Position</span>
+                        <span class="inspector-inline-button">&#8596;</span>
+                        <span class="inspector-inline-button">&#8597;</span>
+                      </div>
+                    </div>
+
+                    <div class="inspector-block">
+                      <h3>Transform section</h3>
+                      <div class="inspector-slider-row">
+                        <label>Size</label>
+                        <span class="inspector-slider slider-size-editor"></span>
+                        <small>100%</small>
+                      </div>
+                      <div class="inspector-slider-row">
+                        <label>Rotate</label>
+                        <span class="inspector-slider slider-rotate-editor"></span>
+                        <small>0 deg</small>
+                      </div>
+                      <div class="inspector-slider-row">
+                        <label>Stretch</label>
+                        <span class="inspector-slider slider-stretch-editor"></span>
+                        <small>100%</small>
+                      </div>
+                      <div class="inspector-slider-row">
+                        <label>Transparency</label>
+                        <span class="inspector-slider slider-transparency-editor"></span>
+                        <small>100%</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="screenshot-copy">
+                <p class="panel-kicker">Customization</p>
+                <h3>The inspector mirrors the requested text, font, color, size, rotate, stretch, transparency, and photo upload behavior.</h3>
+              </div>
+            </article>
+
+            <article class="screenshot-card screenshot-card-realtime">
+              <div class="screenshot-frame">
+                <div class="screenshot-topbar">
+                  <div class="screenshot-dots" aria-hidden="true">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+                  <div class="screenshot-pill">PrintPage Controls</div>
+                </div>
+
+                <div class="screenshot-body screenshot-body-stats">
+                  <div class="print-settings-shot">
+                    <strong>Print Settings</strong>
+                    <span class="settings-label">Paper Size</span>
+                    <span class="settings-field">A4 (210 x 297 mm)</span>
+                    <span class="settings-label">Button Size</span>
+                    <span class="settings-field">2.25"</span>
+                    <span class="settings-check">Show Cut Lines</span>
+                    <p>Fits 6 pins at 2.25" + 1 cm size + 1 cm bleed.</p>
+                    <div class="settings-buttons">
+                      <span>Back</span>
+                      <span>Download PDF</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="screenshot-copy">
+                <p class="panel-kicker">Print Settings</p>
+                <h3>The print page lets users choose button size, switch between A4 or Letter, enable cut lines, and export through PDFBox.</h3>
+              </div>
+            </article>
+
+            <article class="screenshot-card screenshot-card-library">
+              <div class="screenshot-frame">
+                <div class="screenshot-topbar">
+                  <div class="screenshot-dots" aria-hidden="true">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+                  <div class="screenshot-pill">Print Composition</div>
+                </div>
+
+                <div class="screenshot-body screenshot-body-library">
+                  <div class="a4-preview-shot">
+                    <div class="a4-paper-stage">
+                      <div class="a4-paper-sheet">
+                        <p class="paper-caption">A4 Preview | 2.25" + 1 cm | 6 pins</p>
+                        <div class="a4-pin-grid" aria-hidden="true">
+                          <span class="a4-pin a4-pin-filled"></span>
+                          <span class="a4-pin"></span>
+                          <span class="a4-pin"></span>
+                          <span class="a4-pin"></span>
+                          <span class="a4-pin"></span>
+                          <span class="a4-pin"></span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="a4-settings-panel">
+                      <div class="a4-settings-card">
+                        <strong>Print Settings</strong>
+                        <span class="settings-field">A4 (210 x 297 mm)</span>
+                        <span class="settings-field">2.25"</span>
+                        <div class="settings-buttons">
+                          <span>Back</span>
+                          <span>Download PDF</span>
+                        </div>
+                      </div>
+
+                      <div class="a4-settings-card">
+                        <strong>Printable Items</strong>
+                        <div class="printable-list-card">
+                          <span class="printable-list-thumb"></span>
+                          <div>
+                            <span>2.25" pin</span>
+                            <small>Ready for print placement</small>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="screenshot-copy">
+                <p class="panel-kicker">Paper Preview</p>
+                <h3>The print composition screen arranges circles from the selected button size and lets eligible layers be placed before A4 or Letter export.</h3>
+              </div>
+            </article>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="footer-shell">
+          <div class="footer-brand">
+            <a class="footer-mark" href="index.html">Pin Button Maker</a>
+            <p>
+              A polished static landing page that summarizes the Java Swing
+              editor, print workflow, shared state, and PDF export behavior of
+              the desktop prototype.
+            </p>
+          </div>
+
+          <div class="footer-links" aria-label="Footer navigation">
+            <a href="features.html">Features</a>
+            <a href="preview.html">Preview</a>
+            <a href="prototype.html">Prototype</a>
+            <a href="about.html">About</a>
+            <a href="members.html">Members</a>
+          </div>
+
+          <p class="footer-meta">Java Swing Desktop Prototype</p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
+
+

@@ -63,6 +63,14 @@ section {
   scroll-margin-top: 7rem;
 }
 
+.standalone-page .features-section,
+.standalone-page .preview-section,
+.standalone-page .download-section,
+.standalone-page .about-section,
+.standalone-page .members-section {
+  padding-top: clamp(3.9rem, 6.8vw, 5.25rem);
+}
+
 .page-shell {
   position: relative;
   overflow: hidden;
@@ -137,6 +145,7 @@ section {
   font-size: 1.1rem;
   font-weight: 800;
   letter-spacing: -0.04em;
+  white-space: nowrap;
 }
 
 .nav-links {
@@ -167,6 +176,17 @@ section {
   background: rgba(255, 255, 255, 0.72);
   box-shadow: inset 0 0 0 1px rgba(20, 33, 61, 0.06);
   transform: translateY(-1px);
+}
+
+.page-home .nav-links a[href="index.html"],
+.page-features .nav-links a[href="features.html"],
+.page-preview .nav-links a[href="preview.html"],
+.page-prototype .nav-links a[href="prototype.html"],
+.page-about .nav-links a[href="about.html"],
+.page-members .nav-links a[href="members.html"] {
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.78);
+  box-shadow: inset 0 0 0 1px rgba(20, 33, 61, 0.07);
 }
 
 .btn {
@@ -896,7 +916,7 @@ section {
 .preview-card-library {
   right: 0.35rem;
   bottom: -2.4rem;
-  width: 11.9rem;
+  width: 13.2rem;
   transform: rotate(-2deg);
   z-index: 2;
 }
@@ -1010,6 +1030,7 @@ section {
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.05),
     0 20px 38px rgba(18, 29, 56, 0.16);
+  transition: box-shadow 320ms ease, transform 320ms ease;
 }
 
 .desktop-preview-image-shell {
@@ -1060,9 +1081,11 @@ section {
   }
 
   .hero-visual:has(.preview-main:hover) .desktop-preview-image-shell,
-  .hero-visual:has(.preview-main:focus-within) .desktop-preview-image-shell {
+  .hero-visual:has(.preview-main:focus-within) .desktop-preview-image-shell,
+  .hero-visual:has(.preview-main:hover) .desktop-editor-frame,
+  .hero-visual:has(.preview-main:focus-within) .desktop-editor-frame {
     box-shadow:
-      inset 0 1px 0 rgba(255, 255, 255, 0.9),
+      inset 0 1px 0 rgba(255, 255, 255, 0.08),
       0 32px 56px rgba(18, 29, 56, 0.2);
   }
 
@@ -1443,6 +1466,15 @@ section {
     background-color 220ms ease;
 }
 
+.editor-command-bar .active-button,
+.system-editor-toolbar .active-button {
+  border-color: rgba(117, 153, 255, 0.46);
+  background: linear-gradient(180deg, rgba(76, 108, 196, 0.98), rgba(62, 91, 175, 0.98));
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.12),
+    0 12px 22px rgba(36, 71, 160, 0.22);
+}
+
 .preview-card:hover .toolbar-mini-grid span,
 .preview-card:focus-within .toolbar-mini-grid span,
 .screenshot-card:hover .system-editor-toolbar span,
@@ -1491,6 +1523,10 @@ section {
 
 .pin-button-preview-compact {
   width: min(100%, 20.5rem);
+}
+
+.desktop-editor-frame .pin-button-preview-editor {
+  width: min(100%, 18rem);
 }
 
 .pin-button-guide,
@@ -1551,6 +1587,29 @@ section {
 
 .pin-button-label-bottom {
   bottom: 22%;
+}
+
+.pin-button-label-editor-top {
+  top: 23%;
+  font-size: clamp(1.15rem, 1.8vw, 1.9rem);
+}
+
+.pin-button-label-editor-bottom {
+  top: 63%;
+  font-size: clamp(1.05rem, 1.65vw, 1.7rem);
+}
+
+.pin-button-photo-editor {
+  inset: auto;
+  top: 56%;
+  left: 50%;
+  width: 22%;
+  height: 22%;
+  border-width: 2px;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  transform: translateX(-50%);
 }
 
 .editor-inspector,
@@ -1635,6 +1694,11 @@ section {
   transform: rotate(45deg) translateY(-10%);
 }
 
+.inspector-field-strong {
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+
 .inspector-field-bright {
   background: linear-gradient(180deg, rgba(248, 250, 254, 0.98), rgba(234, 240, 249, 0.95));
   color: #2d3747;
@@ -1684,6 +1748,10 @@ section {
 .screenshot-card:focus-within .settings-buttons span,
 .screenshot-card:hover .system-panel-cta,
 .screenshot-card:focus-within .system-panel-cta,
+.screenshot-card:hover .inspector-inline-button,
+.screenshot-card:focus-within .inspector-inline-button,
+.screenshot-card:hover .inspector-inline-icon,
+.screenshot-card:focus-within .inspector-inline-icon,
 .screenshot-card:hover .inspector-button,
 .screenshot-card:focus-within .inspector-button {
   transform: translateY(-2px);
@@ -1742,6 +1810,68 @@ section {
   transform: translateY(-50%);
 }
 
+.inspector-slider-row-bend {
+  grid-template-columns: 2.7rem minmax(0, 1fr) auto auto;
+}
+
+.slider-bend {
+  --fill: 0%;
+}
+
+.slider-size-editor {
+  --fill: 42%;
+}
+
+.slider-rotate-editor {
+  --fill: 62%;
+}
+
+.slider-stretch-editor {
+  --fill: 41%;
+}
+
+.slider-transparency-editor {
+  --fill: 100%;
+}
+
+.inspector-inline-icon,
+.inspector-inline-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.05rem;
+  border: 1px solid rgba(118, 132, 153, 0.2);
+  border-radius: 0.82rem;
+  background:
+    linear-gradient(180deg, rgba(76, 84, 98, 0.94), rgba(61, 69, 82, 0.92));
+  color: #eef3ff;
+  font-size: 0.72rem;
+  font-weight: 800;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.05),
+    0 10px 18px rgba(10, 18, 31, 0.12);
+}
+
+.inspector-inline-icon {
+  width: 1.85rem;
+  min-width: 1.85rem;
+}
+
+.inspector-inline-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.38rem;
+  margin-top: 0.6rem;
+}
+
+.inspector-inline-button {
+  padding: 0 0.68rem;
+}
+
+.inspector-inline-button-wide {
+  padding-inline: 0.95rem;
+}
+
 .slider-size {
   --fill: 36%;
 }
@@ -1772,6 +1902,8 @@ section {
 .system-editor-tabs span {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  gap: 0.45rem;
   min-height: 2.1rem;
   padding: 0 0.6rem;
   border: 1px solid rgba(118, 132, 153, 0.18);
@@ -1786,8 +1918,27 @@ section {
     border-color 220ms ease;
 }
 
+.editor-tab strong {
+  font: inherit;
+  font-weight: 700;
+}
+
+.editor-tab small {
+  color: #d8e1ef;
+  font-size: 0.78em;
+  line-height: 1;
+}
+
+.editor-tab.active small {
+  color: #ffffff;
+}
+
 .desktop-editor-frame .pin-button-preview {
   width: min(100%, 12.4rem);
+}
+
+.desktop-editor-frame .pin-button-preview.pin-button-preview-editor {
+  width: min(100%, 18rem);
 }
 
 .desktop-editor-frame .pin-button-preview-compact {
@@ -1798,10 +1949,224 @@ section {
   font-size: clamp(1rem, 1.45vw, 1.35rem);
 }
 
+.desktop-editor-frame .inspector-inline-icon,
+.desktop-editor-frame .inspector-inline-button {
+  min-height: 1.85rem;
+  font-size: 0.62rem;
+}
+
+.desktop-editor-frame .inspector-inline-button {
+  padding-inline: 0.62rem;
+}
+
+.desktop-editor-frame .inspector-inline-button-wide {
+  padding-inline: 0.78rem;
+}
+
 .desktop-editor-frame-hero .editor-main-grid,
 .desktop-editor-frame-preview .system-editor-layout {
   min-height: 0;
   height: 100%;
+}
+
+.desktop-editor-frame-hero .editor-main-grid,
+.desktop-editor-frame-preview .editor-main-grid {
+  grid-template-columns: minmax(0, 1.14fr) minmax(145px, 0.86fr);
+}
+
+.desktop-editor-frame-hero .editor-command-bar,
+.desktop-editor-frame-preview .editor-command-bar {
+  gap: 0.28rem;
+  padding: 0.34rem;
+}
+
+.desktop-editor-frame-hero .editor-command-bar span,
+.desktop-editor-frame-preview .editor-command-bar span {
+  min-height: 1.45rem;
+  padding: 0.18rem 0.18rem;
+  font-size: 0.48rem;
+  border-radius: 0.62rem;
+}
+
+.desktop-editor-frame-hero .editor-stage,
+.desktop-editor-frame-preview .editor-stage {
+  padding: 0.38rem;
+}
+
+.desktop-editor-frame-hero .editor-stage::before,
+.desktop-editor-frame-preview .editor-stage::before {
+  inset: 0.48rem;
+  border-radius: 0.9rem;
+}
+
+.desktop-editor-frame-hero .pin-button-preview.pin-button-preview-editor,
+.desktop-editor-frame-preview .pin-button-preview.pin-button-preview-editor {
+  width: min(100%, 10.8rem);
+}
+
+.desktop-editor-frame-hero .pin-button-guide,
+.desktop-editor-frame-preview .pin-button-guide {
+  border-width: 2px;
+}
+
+.desktop-editor-frame-hero .pin-button-surface,
+.desktop-editor-frame-preview .pin-button-surface {
+  inset: 10%;
+  border-width: 2px;
+}
+
+.desktop-editor-frame-hero .pin-button-ring,
+.desktop-editor-frame-preview .pin-button-ring {
+  inset: 22%;
+  border-width: 3px;
+}
+
+.desktop-editor-frame-hero .pin-button-label,
+.desktop-editor-frame-preview .pin-button-label {
+  font-size: 0.88rem;
+}
+
+.desktop-editor-frame-hero .pin-button-label-editor-top,
+.desktop-editor-frame-preview .pin-button-label-editor-top {
+  top: 24%;
+}
+
+.desktop-editor-frame-hero .pin-button-label-editor-bottom,
+.desktop-editor-frame-preview .pin-button-label-editor-bottom {
+  top: 64%;
+}
+
+.desktop-editor-frame-hero .pin-button-photo-editor,
+.desktop-editor-frame-preview .pin-button-photo-editor {
+  top: 57%;
+  width: 18%;
+  height: 18%;
+}
+
+.desktop-editor-frame-hero .editor-inspector,
+.desktop-editor-frame-preview .editor-inspector {
+  gap: 0.32rem;
+  padding: 0.38rem;
+}
+
+.desktop-editor-frame-hero .inspector-block,
+.desktop-editor-frame-preview .inspector-block {
+  padding: 0.42rem;
+  border-radius: 0.75rem;
+}
+
+.desktop-editor-frame-hero .inspector-block h3,
+.desktop-editor-frame-preview .inspector-block h3 {
+  font-size: 0.68rem;
+}
+
+.desktop-editor-frame-hero .inspector-block p,
+.desktop-editor-frame-preview .inspector-block p {
+  margin: 0.16rem 0 0.3rem;
+  font-size: 0.48rem;
+}
+
+.desktop-editor-frame-hero .inspector-label,
+.desktop-editor-frame-preview .inspector-label {
+  margin-top: 0.3rem;
+  font-size: 0.5rem;
+}
+
+.desktop-editor-frame-hero .inspector-field,
+.desktop-editor-frame-hero .inspector-select,
+.desktop-editor-frame-hero .inspector-field-bright,
+.desktop-editor-frame-preview .inspector-field,
+.desktop-editor-frame-preview .inspector-select,
+.desktop-editor-frame-preview .inspector-field-bright {
+  min-height: 1.34rem;
+  margin-top: 0.18rem;
+  padding: 0 0.42rem;
+  border-radius: 0.52rem;
+  font-size: 0.48rem;
+}
+
+.desktop-editor-frame-hero .inspector-select,
+.desktop-editor-frame-preview .inspector-select {
+  padding-right: 1.5rem;
+}
+
+.desktop-editor-frame-hero .inspector-select::after,
+.desktop-editor-frame-preview .inspector-select::after {
+  right: 0.6rem;
+  width: 0.32rem;
+  height: 0.32rem;
+}
+
+.desktop-editor-frame-hero .inspector-slider-row,
+.desktop-editor-frame-preview .inspector-slider-row {
+  grid-template-columns: 1.9rem minmax(0, 1fr) auto;
+  gap: 0.24rem;
+  margin-top: 0.22rem;
+}
+
+.desktop-editor-frame-hero .inspector-slider-row-bend,
+.desktop-editor-frame-preview .inspector-slider-row-bend {
+  grid-template-columns: 1.9rem minmax(0, 1fr) auto auto;
+}
+
+.desktop-editor-frame-hero .inspector-slider-row label,
+.desktop-editor-frame-hero .inspector-slider-row small,
+.desktop-editor-frame-preview .inspector-slider-row label,
+.desktop-editor-frame-preview .inspector-slider-row small {
+  font-size: 0.44rem;
+}
+
+.desktop-editor-frame-hero .inspector-slider,
+.desktop-editor-frame-preview .inspector-slider {
+  height: 0.22rem;
+}
+
+.desktop-editor-frame-hero .inspector-slider::after,
+.desktop-editor-frame-preview .inspector-slider::after {
+  left: calc(var(--fill) - 0.28rem);
+  width: 0.56rem;
+  height: 0.56rem;
+}
+
+.desktop-editor-frame-hero .inspector-inline-actions,
+.desktop-editor-frame-preview .inspector-inline-actions {
+  gap: 0.22rem;
+  margin-top: 0.34rem;
+}
+
+.desktop-editor-frame-hero .inspector-inline-icon,
+.desktop-editor-frame-hero .inspector-inline-button,
+.desktop-editor-frame-preview .inspector-inline-icon,
+.desktop-editor-frame-preview .inspector-inline-button {
+  min-height: 1.28rem;
+  padding-inline: 0.36rem;
+  border-radius: 0.48rem;
+  font-size: 0.44rem;
+}
+
+.desktop-editor-frame-hero .inspector-inline-icon,
+.desktop-editor-frame-preview .inspector-inline-icon {
+  width: 1.25rem;
+  min-width: 1.25rem;
+}
+
+.desktop-editor-frame-hero .inspector-inline-button-wide,
+.desktop-editor-frame-preview .inspector-inline-button-wide {
+  padding-inline: 0.54rem;
+}
+
+.desktop-editor-frame-hero .editor-tabbar-editor,
+.desktop-editor-frame-preview .editor-tabbar-editor {
+  gap: 0.22rem;
+  padding: 0.28rem 0.34rem;
+}
+
+.desktop-editor-frame-hero .editor-tab,
+.desktop-editor-frame-preview .editor-tab {
+  min-height: 1.3rem;
+  padding: 0 0.36rem;
+  border-radius: 0.52rem;
+  font-size: 0.46rem;
 }
 
 .editor-tab.active,
@@ -2287,6 +2652,9 @@ section {
 .preview-gallery {
   display: grid;
   grid-template-columns: minmax(0, 1.08fr) minmax(280px, 0.92fr);
+  grid-template-areas:
+    "featured custom"
+    "realtime custom";
   gap: 1.5rem;
   align-items: start;
 }
@@ -2344,11 +2712,19 @@ section {
 }
 
 .screenshot-card-featured {
-  grid-row: span 2;
+  grid-area: featured;
+}
+
+.screenshot-card-custom {
+  grid-area: custom;
+}
+
+.screenshot-card-realtime {
+  grid-area: realtime;
 }
 
 .screenshot-card-library {
-  grid-column: 1 / -1;
+  grid-area: library;
 }
 
 .screenshot-card-featured,
@@ -2417,7 +2793,8 @@ section {
 
 .screenshot-body-workspace {
   display: grid;
-  grid-template-columns: 4.1rem minmax(0, 1fr);
+  grid-template-columns: 1fr;
+  align-items: center;
   min-height: 25rem;
 }
 
@@ -2548,10 +2925,214 @@ section {
 }
 
 .screenshot-body-custom {
+  display: block;
+  min-height: auto;
+}
+
+.sidebar-stage-shot {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid rgba(206, 217, 235, 0.88);
+  border-radius: 1.45rem;
+  background:
+    linear-gradient(180deg, rgba(250, 252, 255, 0.98), rgba(238, 243, 250, 0.98));
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.9),
+    0 18px 30px rgba(43, 67, 112, 0.08);
+}
+
+.sidebar-stage-layout {
   display: grid;
-  grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
-  gap: 0.95rem;
-  min-height: 16rem;
+  grid-template-columns: 1fr;
+  gap: 0.9rem;
+  align-items: stretch;
+  min-height: auto;
+}
+
+.sidebar-stage-column {
+  display: grid;
+  gap: 0.9rem;
+  align-content: start;
+  width: 100%;
+}
+
+.sidebar-stage-blank {
+  display: none;
+}
+
+.sidebar-shot-card {
+  padding: 1rem;
+  border-radius: 1.05rem;
+  width: 100%;
+}
+
+.sidebar-shot-card h3 {
+  font-size: 1rem;
+}
+
+.sidebar-shot-card p {
+  margin: 0.28rem 0 0.68rem;
+}
+
+.sidebar-shot-card .inspector-label {
+  margin-top: 0.62rem;
+}
+
+.sidebar-shot-card .inspector-field,
+.sidebar-shot-card .inspector-select {
+  min-height: 2.35rem;
+  font-size: 0.78rem;
+}
+
+.sidebar-slider-group {
+  display: grid;
+  gap: 0.34rem;
+  margin-top: 0.72rem;
+}
+
+.sidebar-slider-group label {
+  color: #d7dfec;
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.sidebar-slider-line {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto auto;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.sidebar-slider-line small {
+  color: #c2cbda;
+  font-size: 0.68rem;
+  font-weight: 700;
+}
+
+.sidebar-shot-icon {
+  width: 2.05rem;
+  min-width: 2.05rem;
+  min-height: 2.05rem;
+  padding: 0;
+}
+
+.sidebar-shot-actions {
+  justify-content: flex-start;
+  gap: 0.42rem;
+}
+
+.sidebar-shot-actions .inspector-inline-button-wide {
+  flex: 1 1 auto;
+}
+
+.sidebar-shot-actions .inspector-inline-button:not(.inspector-inline-button-wide) {
+  width: 2.3rem;
+  min-width: 2.3rem;
+  padding: 0;
+}
+
+.sidebar-shot-background {
+  color: #1f2735;
+  font-weight: 800;
+  border-color: rgba(210, 219, 234, 0.72);
+  background:
+    linear-gradient(180deg, rgba(253, 254, 255, 0.98), rgba(245, 248, 252, 0.98));
+}
+
+.print-settings-shot-inline {
+  padding: 1rem 1rem 1.05rem;
+  border-radius: 1.15rem;
+}
+
+.print-settings-shot-inline strong {
+  font-size: 1rem;
+}
+
+.print-settings-shot-inline .settings-label {
+  margin-top: 0.72rem;
+  font-size: 0.68rem;
+}
+
+.print-settings-shot-inline .settings-field {
+  min-height: 2.35rem;
+  font-size: 0.78rem;
+}
+
+.print-settings-shot-inline .settings-check {
+  margin-top: 0.8rem;
+  font-size: 0.78rem;
+}
+
+.print-settings-shot-inline p {
+  margin-top: 0.75rem;
+  font-size: 0.76rem;
+  line-height: 1.6;
+}
+
+.print-settings-shot-inline .settings-buttons {
+  gap: 0.65rem;
+  margin-top: 0.9rem;
+}
+
+.print-settings-shot-inline .settings-buttons span {
+  min-height: 2.65rem;
+  font-size: 0.82rem;
+  border-radius: 0.9rem;
+}
+
+@media (max-width: 720px) {
+  .sidebar-stage-shot {
+    padding: 0.85rem;
+  }
+
+  .sidebar-stage-layout {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .sidebar-stage-blank {
+    display: none;
+  }
+}
+
+@media (max-width: 520px) {
+  .sidebar-shot-card {
+    padding: 0.85rem;
+  }
+
+  .sidebar-shot-card .inspector-field,
+  .sidebar-shot-card .inspector-select {
+    min-height: 2.15rem;
+    font-size: 0.74rem;
+  }
+
+  .sidebar-slider-line {
+    grid-template-columns: minmax(0, 1fr) auto auto;
+    gap: 0.38rem;
+  }
+
+  .sidebar-slider-line small {
+    font-size: 0.62rem;
+  }
+
+  .sidebar-shot-actions .inspector-inline-button-wide {
+    min-width: 0;
+  }
+
+  .print-settings-shot-inline {
+    padding: 0.9rem;
+  }
+
+  .print-settings-shot-inline .settings-field {
+    min-height: 2.15rem;
+    font-size: 0.74rem;
+  }
+
+  .print-settings-shot-inline .settings-buttons span {
+    min-height: 2.45rem;
+    font-size: 0.78rem;
+  }
 }
 
 .custom-poster {
@@ -3493,6 +4074,7 @@ section {
   font-size: 1.04rem;
   font-weight: 800;
   letter-spacing: -0.04em;
+  white-space: nowrap;
 }
 
 .footer-brand p,
@@ -3652,6 +4234,13 @@ section {
   .preview-section-intro,
   .preview-gallery {
     grid-template-columns: 1fr;
+  }
+
+  .preview-gallery {
+    grid-template-areas:
+      "featured"
+      "custom"
+      "realtime";
   }
 
   .screenshot-card-featured,
